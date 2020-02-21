@@ -31,7 +31,8 @@ namespace MvcRoom
                 try
                 {
                     var context = services.GetRequiredService<DungeonContext>();
-                    context.Database.EnsureCreated();
+                    //context.Database.EnsureCreated();
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {

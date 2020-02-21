@@ -28,7 +28,7 @@ namespace MvcRoom
                 return NotFound();
             }
 
-            Room = await _context.Room.FirstOrDefaultAsync(m => m.ID == id);
+            Room = await _context.Rooms.FirstOrDefaultAsync(m => m.ID == id);
 
             if (Room == null)
             {
